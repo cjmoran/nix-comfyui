@@ -1,5 +1,10 @@
-{ buildExtension, fetchFromGitHub, lib, platform, python3 }:
-
+{
+  buildExtension,
+  fetchFromGitHub,
+  lib,
+  platform,
+  python3,
+}:
 buildExtension {
   name = "fannovel16-frame-interpolation";
   version = "0.0.0";
@@ -12,28 +17,27 @@ buildExtension {
     hash = "sha256-GZYYpPKH6qWZAgZ2ogzjqBXEsl1/PvylJ00q6AWdIOE=";
   };
 
-  propagatedBuildInputs = [
-    python3.pkgs.einops
-    python3.pkgs.kornia
-    python3.pkgs.numpy
-    python3.pkgs.opencv-python
-    python3.pkgs.packaging
-    python3.pkgs.pillow
-    python3.pkgs.pyyaml
-    python3.pkgs.requests
-    python3.pkgs.scipy
-    python3.pkgs.torch
-    python3.pkgs.torchvision
-    python3.pkgs.tqdm
-  ]
-  ++
-  (lib.optional (platform == "cuda") python3.pkgs.cupy-cuda12x)
-  ++
-  (lib.optional (platform != "cuda") python3.pkgs.taichi);
+  propagatedBuildInputs =
+    [
+      python3.pkgs.einops
+      python3.pkgs.kornia
+      python3.pkgs.numpy
+      python3.pkgs.opencv-python
+      python3.pkgs.packaging
+      python3.pkgs.pillow
+      python3.pkgs.pyyaml
+      python3.pkgs.requests
+      python3.pkgs.scipy
+      python3.pkgs.torch
+      python3.pkgs.torchvision
+      python3.pkgs.tqdm
+    ]
+    ++ (lib.optional (platform == "cuda") python3.pkgs.cupy-cuda12x)
+    ++ (lib.optional (platform != "cuda") python3.pkgs.taichi);
 
   postPatch = ''
     ${lib.optionalString (platform != "cuda") ''
-      printf 'ops_backend: "taichi"\n' >config.yaml
+      printf 'ops_backend: "taichi"\nckpts_path: "./ckpts"\n' >config.yaml
     ''}
 
     rm install.py test.py
@@ -54,17 +58,16 @@ buildExtension {
       "custom_nodes/fannovel16-frame-interpolation/ckpts"
     ];
 
-    check-pkgs.ignoredModuleNames = [
-      "^mysql(\\..+)?$"
-      "^pyunpack$"
-      "^vapoursynth$"
-      "^vfi_models(\\..+)?$"
-      "^vfi_utils$"
-    ]
-    ++
-    (lib.optional (platform == "cuda") "^taichi(\\..+)?$")
-    ++
-    (lib.optional (platform != "cuda") "^cupy(\\..+)?$");
+    check-pkgs.ignoredModuleNames =
+      [
+        "^mysql(\\..+)?$"
+        "^pyunpack$"
+        "^vapoursynth$"
+        "^vfi_models(\\..+)?$"
+        "^vfi_utils$"
+      ]
+      ++ (lib.optional (platform == "cuda") "^taichi(\\..+)?$")
+      ++ (lib.optional (platform != "cuda") "^cupy(\\..+)?$");
   };
 
   meta = {
