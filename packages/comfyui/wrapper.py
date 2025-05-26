@@ -20,7 +20,6 @@ def main():
     comfyui = spec["comfyui"]
     comfyui_args = spec["comfyui_args"]
     extensions = spec["extensions"]
-    frontend = spec["frontend"]
     interpreter = spec["interpreter"]
     prepopulated_state_files = sorted(spec["prepopulated_state_files"])
     state_dirs = spec["state_dirs"]
@@ -62,10 +61,6 @@ def main():
         if name in prepopulated_state_files:
             continue
         cmd.extend(["--ro-bind", f"{comfyui}/{name}", f"{cwd}/{name}"])
-
-    # Bind-mount the chosen frontend.
-    # - $PWD/web -> /nix/store/...comfyui-frontend.../web
-    # cmd.extend(["--ro-bind", frontend, f"{cwd}/web"])
 
     # For each extension, bind-mount its corresponding directory.
     # - $PWD/custom_nodes/foo -> /nix/store/...foo...

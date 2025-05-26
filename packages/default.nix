@@ -9,7 +9,6 @@
     bwrapArgs = [];
     commandLineArgs = [];
     extensions = [];
-    frontend = comfyui-frontend;
     prepopulatedStateFiles = [];
     stateDirs = [];
   };

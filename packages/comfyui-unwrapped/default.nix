@@ -35,6 +35,7 @@ python3.pkgs.buildPythonPackage {
   ];
 
   propagatedBuildInputs = [
+    python3.pkgs.av
     python3.pkgs.aiohttp
     python3.pkgs.einops
     python3.pkgs.kornia
@@ -57,6 +58,8 @@ python3.pkgs.buildPythonPackage {
     python3.pkgs.tqdm
     python3.pkgs.transformers
     python3.pkgs.typing-extensions
+    python3.pkgs.comfyui-frontend-package
+    python3.pkgs.comfyui-workflow-templates
   ];
 
   postPatch = ''

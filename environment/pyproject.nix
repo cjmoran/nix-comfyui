@@ -1,13 +1,18 @@
-{ basePython, content, emptyPyproject, lib }:
-
-let
-  finalContent = lib.recursiveUpdate
+{
+  basePython,
+  content,
+  emptyPyproject,
+  lib,
+}: let
+  finalContent =
+    lib.recursiveUpdate
     {
       tool.poetry.name = "comfyui-environment";
 
       tool.poetry.dependencies = {
         python = "==${basePython.version}";
 
+        av = "*";
         accelerate = "*";
         addict = "*";
         aiohttp = "*";
@@ -64,11 +69,12 @@ let
         ultralytics = "*";
         yacs = "*";
         yapf = "*";
+        comfyui-frontend-package = "*";
+        comfyui-workflow-templates = "*";
       };
     }
     content;
 in
-
-emptyPyproject.override {
-  content = finalContent;
-}
+  emptyPyproject.override {
+    content = finalContent;
+  }
