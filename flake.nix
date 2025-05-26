@@ -3,15 +3,15 @@
 
   inputs = {
     flake-utils = {
-      url = "flake-utils";
+      url = "github:numtide/flake-utils";
     };
 
     nixpkgs = {
-      url = "nixpkgs";
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
     poetry2nix = {
-      url = "poetry2nix";
+      url = "github:nix-community/poetry2nix";
       inputs = {
         flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
@@ -20,12 +20,12 @@
     };
   };
 
-  outputs = inputs:
-    let
-      mkComfyuiPackages = pkgs: pkgs.callPackage ./scope.nix {
-        poetry2nix = inputs.poetry2nix.lib.mkPoetry2Nix { inherit pkgs; };
+  outputs = inputs: let
+    mkComfyuiPackages = pkgs:
+      pkgs.callPackage ./scope.nix {
+        poetry2nix = inputs.poetry2nix.lib.mkPoetry2Nix {inherit pkgs;};
       };
-    in
+  in
     {
       lib = {
         inherit mkComfyuiPackages;
@@ -35,9 +35,8 @@
         comfyuiPackages = mkComfyuiPackages prev;
       };
     }
-    //
-    inputs.flake-utils.lib.eachDefaultSystem (system:
-      let
+    // inputs.flake-utils.lib.eachDefaultSystem (
+      system: let
         pkgs = import inputs.nixpkgs {
           inherit system;
           config = {
@@ -47,28 +46,24 @@
 
         comfyuiPackages = mkComfyuiPackages pkgs;
 
-        mkPackageEntry = path:
-          {
-            name = builtins.concatStringsSep "-" path;
-            value = pkgs.lib.getAttrFromPath path comfyuiPackages;
-          };
+        mkPackageEntry = path: {
+          name = builtins.concatStringsSep "-" path;
+          value = pkgs.lib.getAttrFromPath path comfyuiPackages;
+        };
 
         packages = builtins.listToAttrs (pkgs.lib.flatten (
           (map
-            (name: mkPackageEntry [ name ])
-            [ "krita-with-extensions" ])
-          ++
-          (map
+            (name: mkPackageEntry [name])
+            ["krita-with-extensions"])
+          ++ (map
             (
-              platform:
-              (map
-                (name: mkPackageEntry [ platform name ])
-                [ "comfyui" "comfyui-with-extensions" ])
+              platform: (map
+                (name: mkPackageEntry [platform name])
+                ["comfyui" "comfyui-with-extensions"])
             )
-            [ "cuda" "rocm" ])
+            ["cuda" "rocm"])
         ));
-      in
-      {
+      in {
         formatter = pkgs.nixpkgs-fmt;
 
         devShells.default = pkgs.mkShell {
@@ -83,30 +78,33 @@
             pkgs.nixpkgs-fmt
             pkgs.prefetch-npm-deps
             pkgs.yapf
-            (pkgs.python3.withPackages (p: [ p.nix-prefetch-github ]))
+            (pkgs.python3.withPackages (p: [p.nix-prefetch-github]))
           ];
         };
 
         inherit packages;
 
-        checks = packages // {
-          nix-comfyui-sources = pkgs.runCommand "nix-comfyui-sources"
-            {
-              nativeBuildInputs = [
-                pkgs.just
-                pkgs.nixpkgs-fmt
-                pkgs.yapf
-              ];
-            }
-            ''
-              cd ${./.}
-              just check-fmt
-              touch $out
-            '';
+        checks =
+          packages
+          // {
+            nix-comfyui-sources =
+              pkgs.runCommand "nix-comfyui-sources"
+              {
+                nativeBuildInputs = [
+                  pkgs.just
+                  pkgs.nixpkgs-fmt
+                  pkgs.yapf
+                ];
+              }
+              ''
+                cd ${./.}
+                just check-fmt
+                touch $out
+              '';
 
-          cuda-run-check-pkgs = comfyuiPackages.cuda.run-check-pkgs;
-          rocm-run-check-pkgs = comfyuiPackages.rocm.run-check-pkgs;
-        };
+            cuda-run-check-pkgs = comfyuiPackages.cuda.run-check-pkgs;
+            rocm-run-check-pkgs = comfyuiPackages.rocm.run-check-pkgs;
+          };
 
         legacyPackages = comfyuiPackages;
       }
