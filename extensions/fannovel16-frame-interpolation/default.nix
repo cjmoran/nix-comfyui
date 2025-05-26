@@ -1,9 +1,9 @@
-{
-  buildExtension,
-  fetchFromGitHub,
-  lib,
-  platform,
-  python3,
+{ buildExtension
+, fetchFromGitHub
+, lib
+, platform
+, python3
+,
 }:
 buildExtension {
   name = "fannovel16-frame-interpolation";
@@ -13,8 +13,8 @@ buildExtension {
     owner = "Fannovel16";
     repo = "ComfyUI-Frame-Interpolation";
     fetchSubmodules = false;
-    rev = "c336f7184cb1ac1243381e725fea1ad2c0a10c09";
-    hash = "sha256-GZYYpPKH6qWZAgZ2ogzjqBXEsl1/PvylJ00q6AWdIOE=";
+    rev = "a969c01dbccd9e5510641be04eb51fe93f6bfc3d";
+    hash = "sha256-bBtGs/LyQf7teCD7YT4dypYQTuy3ja+zV1hbQkYcGuU=";
   };
 
   propagatedBuildInputs =

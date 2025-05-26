@@ -1,6 +1,6 @@
-{
-  buildNpmPackage,
-  fetchFromGitHub,
+{ buildNpmPackage
+, fetchFromGitHub
+,
 }:
 buildNpmPackage {
   name = "comfyui-frontend";

@@ -61,7 +61,7 @@ refresh() {
   rw_src="result-$drv_name.src"
 
   git -C "$rw_src" format-patch --no-signature --no-stat \
-    --output-directory "../$drv_dir" --quiet --zero-commit upstream...master
+    --output-directory "../$drv_dir" --quiet --zero-commit upstream...main
 }
 
 up() {

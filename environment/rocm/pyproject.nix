@@ -15,11 +15,11 @@ basePyproject.override {
         source = "torch-rocm";
       };
       torchaudio = {
-        version = "*";
+        version = "~2.7.0";
         source = "torch-rocm";
       };
       torchvision = {
-        version = "*";
+        version = "~0.22.0";
         source = "torch-rocm";
       };
     };

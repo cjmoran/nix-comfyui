@@ -8,8 +8,8 @@ buildExtension {
     owner = "kijai";
     repo = "ComfyUI-SUPIR";
     fetchSubmodules = false;
-    rev = "53fc4f82f139e0875e1f4f3716fbeafa073e4242";
-    hash = "sha256-gCi4KSExqvqC1XUdQNlRetBKt/A9E/UOp75WrfeFcIc=";
+    rev = "29f2e8be0e9c32197ab6cf3a79a8c5776867d8f0";
+    hash = "sha256-IxRbDKR1nvByQHIVuXdPFfVWccdhxdnYUl6PLJ9C6EY=";
   };
 
   propagatedBuildInputs = [

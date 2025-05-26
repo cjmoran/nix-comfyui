@@ -9,17 +9,6 @@ mkdir comfyui && cd comfyui
 nix run github:dyscorv/nix-comfyui#comfyui-with-extensions
 ```
 
-Then setup and run Krita with ComfyUI integration:
-
-```sh
-# Change to the same directory in another terminal window.
-cd comfyui
-# Download the models required by "Generative AI for Krita".
-nix run github:dyscorv/nix-comfyui#krita-ai-diffusion -- --recommended --verbose .
-# Run Krita with ComfyUI integration.
-nix run github:dyscorv/nix-comfyui#krita-with-extensions
-```
-
 ## Usage with Nix Flakes
 
 This project is a Nix flake which can be used as an input for another flake.
@@ -81,18 +70,3 @@ in
 }
 ```
 
-## Krita with ComfyUI Integration
-
-The Krita plugin is available from `krita-ai-diffusion`. The variant of Krita
-which comes with this plugin is called `krita-with-extensions`.
-
-```diff
- { pkgs, ... }:
- 
- {
-   environment.systemPackages = [
--    pkgs.krita
-+    pkgs.comfyuiPackages.krita-with-extensions
-   ];
- }
-```

@@ -8,8 +8,8 @@ buildExtension {
     owner = "EllangoK";
     repo = "ComfyUI-post-processing-nodes";
     fetchSubmodules = false;
-    rev = "b265f36ef5988154bee2aa808d8abe8a2a197847";
-    hash = "sha256-FV965Msj0Xnlq/Q+S30zW2lgeCU8wLSGc5TKKO1Ryr8=";
+    rev = "c49a05254795403648f2c1774b6f5ea39f96e7d5";
+    hash = "sha256-/85bl8UH8jmbrgamub942iR4oKxfCZbyhcyWON8wYV4=";
   };
 
   propagatedBuildInputs = [

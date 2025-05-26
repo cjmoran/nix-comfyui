@@ -8,8 +8,8 @@ buildExtension {
     owner = "BadCafeCode";
     repo = "execution-inversion-demo-comfyui";
     fetchSubmodules = false;
-    rev = "b0b489659684a1b69221db48cabb9dce5f7bb6fb";
-    hash = "sha256-KXaMrBhmIfYxv+uXytXSh2/kei/ULICliVfg5zaJqVw=";
+    rev = "d9eebfaa1a6a33067e8c9108ef093b48279c4cbb";
+    hash = "sha256-kjUBgIxPWgWiqa51BizT6NuwjNE+5GkrYVd0EhYXbqk=";
   };
 
   propagatedBuildInputs = [
