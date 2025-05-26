@@ -6,7 +6,7 @@ basePyproject.override {
   content = {
     tool.poetry.dependencies = {
       pytorch-triton-rocm = {
-        version = "*";
+        version = "~3.3.0";
         source = "torch-rocm";
       };
       taichi = "*";

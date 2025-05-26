@@ -26,7 +26,8 @@ def main():
     state_dirs = spec["state_dirs"]
 
     for path in os.environ.get("NIX_COMFYUI_STATE_DIRS", "").split(":"):
-        if path: state_dirs.append(path)
+        if path:
+            state_dirs.append(path)
 
     state_dirs.sort()
 
@@ -54,14 +55,17 @@ def main():
     # - $PWD/main.py      -> /nix/store/...comfyui-unwrapped.../main.py
     # and so on.
     for name in os.listdir(comfyui):
-        if name == "custom_nodes": continue
-        if name in state_dirs: continue
-        if name in prepopulated_state_files: continue
+        if name == "custom_nodes":
+            continue
+        if name in state_dirs:
+            continue
+        if name in prepopulated_state_files:
+            continue
         cmd.extend(["--ro-bind", f"{comfyui}/{name}", f"{cwd}/{name}"])
 
     # Bind-mount the chosen frontend.
     # - $PWD/web -> /nix/store/...comfyui-frontend.../web
-    cmd.extend(["--ro-bind", frontend, f"{cwd}/web"])
+    # cmd.extend(["--ro-bind", frontend, f"{cwd}/web"])
 
     # For each extension, bind-mount its corresponding directory.
     # - $PWD/custom_nodes/foo -> /nix/store/...foo...
@@ -130,7 +134,8 @@ def main():
     if is_debug:
         print("Executing: bwrap \\")
         for i, arg in enumerate(cmd):
-            if i == 0: continue
+            if i == 0:
+                continue
             last_chars = "" if i == len(cmd) - 1 else " \\"
             print(f"  {shlex.quote(arg)}{last_chars}")
 
