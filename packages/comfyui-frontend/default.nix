@@ -1,5 +1,7 @@
-{ buildNpmPackage, fetchFromGitHub }:
-
+{
+  buildNpmPackage,
+  fetchFromGitHub,
+}:
 buildNpmPackage {
   name = "comfyui-frontend";
 
@@ -7,15 +9,11 @@ buildNpmPackage {
     owner = "Comfy-Org";
     repo = "ComfyUI_frontend";
     fetchSubmodules = false;
-    rev = "a2549f23c74374963a0d98c6ba8cbdbed3ca7ab0";
-    hash = "sha256-EisHrKyQcR51KyFKHTO3rf8d1t9vXkeZXwsYD10HAq4=";
+    rev = "9e137d99249433bd81f8779e835e33c4afb54669";
+    hash = "sha256-u1D6NvIHfoS0GitLkt8kfEQUNzK7aODsi923My8V2K8=";
   };
 
-  npmDepsHash = "sha256-wHVfxjt77pt5T2Co4+4z2OJuwbvoqny3PPVAJA/lgwc=";
-
-  patches = [
-    ./0001-use-neutral-colors.patch
-  ];
+  npmDepsHash = "sha256-K6g/daRHzxU7Gpy+NHZw67HPQFAUTElGiN34PqwT2qI=";
 
   installPhase = ''
     runHook preInstall
