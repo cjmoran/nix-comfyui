@@ -133,7 +133,7 @@ def read_package_requirements(
     from_requirements_file,
     from_imports,
 ):
-    package_path = drv_output.joinpath("lib/python3.11/site-packages")
+    package_path = drv_output.joinpath("lib/python3.12/site-packages")
 
     required_package_names = set()
     unresolved_module_names = set()
