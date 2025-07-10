@@ -8,8 +8,8 @@ buildExtension {
     owner = "city96";
     repo = "ComfyUI-GGUF";
     fetchSubmodules = false;
-    rev = "a2b75978fd50c0227a58316619b79d525b88e570";
-    hash = "sha256-nsAnkzapDWUFtuNnroHqcX4PR5fUWkXXIH+zn5K3aqo=";
+    rev = "b3ec875a68d94b758914fd48d30571d953bb7a54";
+    hash = "sha256-DdCZnRtx9svz9aNxS+HJORNYsDoWVI9DWLcMocRT268=";
   };
 
   propagatedBuildInputs = [

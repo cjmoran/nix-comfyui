@@ -8,8 +8,8 @@ buildExtension {
     owner = "Fannovel16";
     repo = "comfyui_controlnet_aux";
     fetchSubmodules = false;
-    rev = "83463c2e4b04e729268e57f638b4212e0da4badc";
-    hash = "sha256-DPK74Da6J1yVN4te6euGVhrC32wb26BW18wH6WFl0h4=";
+    rev = "59b027e088c1c8facf7258f6e392d16d204b4d27";
+    hash = "sha256-VFMn8UKVOaABJmIrMAUsr7b1yuawO0BCX3T/w+qdIZI=";
   };
 
   propagatedBuildInputs = [

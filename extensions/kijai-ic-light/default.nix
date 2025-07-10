@@ -8,8 +8,8 @@ buildExtension {
     owner = "kijai";
     repo = "ComfyUI-IC-Light";
     fetchSubmodules = false;
-    rev = "0208191a9bd2a214167c8a52237ecadd1fa0220c";
-    hash = "sha256-aODviN/VCSdoZlyh9lt0aISLVPGXsGnfVkP29Lqqtw8=";
+    rev = "22811d903af8a90100dccef1c4b579526649a6ab";
+    hash = "sha256-DX/iRISQ51/FXFuZB1AAVlR5pdd5KKejEZHKbbZbK6M=";
   };
 
   propagatedBuildInputs = [
