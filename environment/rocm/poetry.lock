@@ -3577,18 +3577,18 @@ test = ["cloudpickle (>=1.3)", "coverage (==7.3.1)", "fastapi", "numpy (>=1.17.2
 
 [[package]]
 name = "pytorch-triton-rocm"
-version = "3.3.0"
+version = "3.3.1"
 description = "A language and compiler for custom Deep Learning operations"
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "pytorch_triton_rocm-3.3.0-cp310-cp310-linux_x86_64.whl", hash = "sha256:8d6af3d5b8b43c42b33478d8817c795dd5d6fa1a2e777a154848c18c38eda84a"},
-    {file = "pytorch_triton_rocm-3.3.0-cp311-cp311-linux_x86_64.whl", hash = "sha256:deab3d7270c85ddcdc39daab967434b1db8c08cf01ccc1cb9999fdaef8fc78a4"},
-    {file = "pytorch_triton_rocm-3.3.0-cp312-cp312-linux_x86_64.whl", hash = "sha256:433a71e77fc37fd77d674a8c5e6039a8d959c427d3d0972b46f186190691d26f"},
-    {file = "pytorch_triton_rocm-3.3.0-cp313-cp313-linux_x86_64.whl", hash = "sha256:43f9b1b062723599bdc235234911166825be0f78ddd2360c4c29c1229e83755f"},
-    {file = "pytorch_triton_rocm-3.3.0-cp313-cp313t-linux_x86_64.whl", hash = "sha256:6bd80532d21200ddc8a35ef76ff92d5719193f43e74f905b047671934360031e"},
-    {file = "pytorch_triton_rocm-3.3.0-cp39-cp39-linux_x86_64.whl", hash = "sha256:3d60ce5eefc60974658e963647b4384e4daf3d442952c4bad991504ce51d4b69"},
+    {file = "pytorch_triton_rocm-3.3.1-cp310-cp310-linux_x86_64.whl", hash = "sha256:d54db030d74dcd0df1d166f4d6a63c0a59310297af4a57cbe867dea6e82fb07b"},
+    {file = "pytorch_triton_rocm-3.3.1-cp311-cp311-linux_x86_64.whl", hash = "sha256:8eb26aec84408b2be3d5b942a9edef9fadc6e249afe6aab795872e227ce8f579"},
+    {file = "pytorch_triton_rocm-3.3.1-cp312-cp312-linux_x86_64.whl", hash = "sha256:977423eee5c542a3f8aa4f527aec1688c4d485f207089cb595a8e638fcc3888a"},
+    {file = "pytorch_triton_rocm-3.3.1-cp313-cp313-linux_x86_64.whl", hash = "sha256:104d1087692ea24dbfdb178b7a245c59b04d2121540587e392e30a668cf98edd"},
+    {file = "pytorch_triton_rocm-3.3.1-cp313-cp313t-linux_x86_64.whl", hash = "sha256:dd521c3f3679a79081ebaa9a416d2090b0d3970a157e0bbe1e163dc75e8da4bf"},
+    {file = "pytorch_triton_rocm-3.3.1-cp39-cp39-linux_x86_64.whl", hash = "sha256:126dc1abacb6b48c24ba0a4850423dc5395169ca03ecb242c789c4ad0d25ce88"},
 ]
 
 [package.dependencies]
@@ -5098,18 +5098,18 @@ testing = ["black (==22.3)", "datasets", "numpy", "pytest", "requests", "ruff"]
 
 [[package]]
 name = "torch"
-version = "2.7.0+rocm6.3"
+version = "2.7.1+rocm6.3"
 description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
 optional = false
 python-versions = ">=3.9.0"
 groups = ["main"]
 files = [
-    {file = "torch-2.7.0+rocm6.3-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:039229d5840fbde4d7ff2e2a21975534d62dee393781c49ace0b2a324b84c493"},
-    {file = "torch-2.7.0+rocm6.3-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:44ec3ef11dc67a1d3a2d572e4a6d2d0a4bd6bb096eb67b01ccbbf133627e566c"},
-    {file = "torch-2.7.0+rocm6.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:db65d489c90c1e3349e0913cea98c1499abddf13609f6c2009586ec40e2735cc"},
-    {file = "torch-2.7.0+rocm6.3-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:db5b82f4d03f99572211b0bdac5300700b682c470b9d2b1f5daaa5e0104fc5e7"},
-    {file = "torch-2.7.0+rocm6.3-cp313-cp313t-manylinux_2_28_x86_64.whl", hash = "sha256:2c93b24a245774f624c54d4ae3b1bf35dd89d774f8e54860474a465786ee9c22"},
-    {file = "torch-2.7.0+rocm6.3-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:26dc70bf32a681d62094dbf3408a5a932fd2eb345435315ed236ff967f8bc77d"},
+    {file = "torch-2.7.1+rocm6.3-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:23890206702342b89bff0e022bc77b9d6c11522ed27a2c6b562cd81cbbb74cb6"},
+    {file = "torch-2.7.1+rocm6.3-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:73b7eb3777ffe6b73bf9881686dd659bd71231ac87ac3696d2477e2fe0c036fc"},
+    {file = "torch-2.7.1+rocm6.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:b0c10342f64a34998ae8d5084aa1beae7e11defa46a4e05fe9aa6f09ffb0db37"},
+    {file = "torch-2.7.1+rocm6.3-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:1650ff47f4cd45e5ba222e943e6e0697eb5f1cff15045ffdafe4feb8c279cb93"},
+    {file = "torch-2.7.1+rocm6.3-cp313-cp313t-manylinux_2_28_x86_64.whl", hash = "sha256:adfc55a2704c7b58a3475a409fe6ff619bbc4abbe28127fbcf12cc17e441fd1a"},
+    {file = "torch-2.7.1+rocm6.3-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:eb068a01ab18af2e24b3a7015bf5153d8435356bcf3e11aa6dff73c135e94e70"},
 ]
 
 [package.dependencies]
@@ -5117,7 +5117,7 @@ filelock = "*"
 fsspec = "*"
 jinja2 = "*"
 networkx = "*"
-pytorch-triton-rocm = {version = "3.3.0", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+pytorch-triton-rocm = {version = "3.3.1", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
 setuptools = {version = "*", markers = "python_version >= \"3.12\""}
 sympy = ">=1.13.3"
 typing-extensions = ">=4.10.0"
@@ -5133,28 +5133,22 @@ reference = "torch-rocm"
 
 [[package]]
 name = "torchaudio"
-version = "2.7.0+rocm6.3"
+version = "2.7.1+rocm6.3"
 description = "An audio package for PyTorch"
 optional = false
 python-versions = "*"
 groups = ["main"]
 files = [
-    {file = "torchaudio-2.7.0+rocm6.3-cp310-cp310-linux_x86_64.whl", hash = "sha256:89cce121995c8015e72af87cad3241474d2194e91a3351180cced4553c4427d4"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:8bec99b1ca8d9082ae52a319b661979fd6f5553ee58f3924d62ef43393d505b3"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp311-cp311-linux_x86_64.whl", hash = "sha256:97432c876462a3fd36e1bcf1bfe72d4b3e6000b33967be493d025c14ee8f0d5f"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:f89303a22a5054e9ba12c5fe21200b9318d6196d314bf6037263914b8bed79d3"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp312-cp312-linux_x86_64.whl", hash = "sha256:7f6ca6e432b51263685638a4f7aeb0173131f596856923797874fa643e2cbaa3"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:cb8e28dbed785aad898da7772fc69456ddf51f95bea0a4b3180612987710713c"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp313-cp313-linux_x86_64.whl", hash = "sha256:598e2789e9792d1212a4e51856d9afbcd416a6dcd0757d551c6c0556f47ad762"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:ffdcffa2bcfb4621dc82b5e3023e26f6dc8d4911f2c4bf2634323dcabdf3feca"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp313-cp313t-linux_x86_64.whl", hash = "sha256:3ccdacc264340c17504647e236db1e5cc2053f0637a28964255641e0eb522c9a"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp313-cp313t-manylinux_2_28_x86_64.whl", hash = "sha256:5e0c461dc74c803333e3e0bef1b0c29c0b90ec2c628ae4daa5f045ffffadf929"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp39-cp39-linux_x86_64.whl", hash = "sha256:d17438821e1fcd6b6488e969e9fbbecfa518ec32f8146451035d9a002087e6c7"},
-    {file = "torchaudio-2.7.0+rocm6.3-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:7d65e00294f6db6209750815157280b66ae2246c5f9d0d8e764733560bbe92c5"},
+    {file = "torchaudio-2.7.1+rocm6.3-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:81aff1ae49ccc8951fb1353318087285c9b14a2e5b4ac97b3b8c2b8e47815e8d"},
+    {file = "torchaudio-2.7.1+rocm6.3-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:9a9807f562e04d09f867f5bbfcf72d9e6752f3f9a55ea673fd6cf03f55d23c1f"},
+    {file = "torchaudio-2.7.1+rocm6.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:dd485df55ab7b387594070d47dd8bdba81dc77de82e5ba38fc6784d053455272"},
+    {file = "torchaudio-2.7.1+rocm6.3-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:5d4027426412d55b9333033d99067320ebd4b508d121fdb1a6164df37cf91532"},
+    {file = "torchaudio-2.7.1+rocm6.3-cp313-cp313t-manylinux_2_28_x86_64.whl", hash = "sha256:709aacc841fdb775e1a162600e34524114d57680c9cb5c9214aa14ba21bee54f"},
+    {file = "torchaudio-2.7.1+rocm6.3-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:8f8cdb36eef80893e3d0226548aed515ef9824c302b130f1d2db35c8431cab21"},
 ]
 
 [package.dependencies]
-torch = "2.7.0"
+torch = "2.7.1"
 
 [package.source]
 type = "legacy"
@@ -5210,30 +5204,24 @@ trampoline = ">=0.1.2"
 
 [[package]]
 name = "torchvision"
-version = "0.22.0+rocm6.3"
+version = "0.22.1+rocm6.3"
 description = "image and video datasets and models for torch deep learning"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "torchvision-0.22.0+rocm6.3-cp310-cp310-linux_x86_64.whl", hash = "sha256:0a87083459e68fc36c1296fd94a21027f0c1d4ce462416202b020b24cfbab10b"},
-    {file = "torchvision-0.22.0+rocm6.3-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:46bee27712b00287d8bcc725b7de2586fbc00497ec1c6c19f4b501d711cdebc5"},
-    {file = "torchvision-0.22.0+rocm6.3-cp311-cp311-linux_x86_64.whl", hash = "sha256:788e3301ee6f3e5601024227573360e88bfde0f7da50e924eb56609eb6c0bd0f"},
-    {file = "torchvision-0.22.0+rocm6.3-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:9ad8197d38018e1eb4315bad0273101685f82002329b6795953d65f540b27e05"},
-    {file = "torchvision-0.22.0+rocm6.3-cp312-cp312-linux_x86_64.whl", hash = "sha256:b468a34dbb3c1b04a95bad684dd3dd8f6a6843148c566a3455ce0d14c8bd4dfc"},
-    {file = "torchvision-0.22.0+rocm6.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:220907325f36be7c23077100a8f5645ac644e2eecde7f991fbea563ddde88b84"},
-    {file = "torchvision-0.22.0+rocm6.3-cp313-cp313-linux_x86_64.whl", hash = "sha256:a8a4bf1cd38ceccb1324b36c6fd748c68806b5f00b8c4c01b924031f24508355"},
-    {file = "torchvision-0.22.0+rocm6.3-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:5a4761182ed8db518ffb301b1181aaf7da6764c0b88645742816257986e6a9ba"},
-    {file = "torchvision-0.22.0+rocm6.3-cp313-cp313t-linux_x86_64.whl", hash = "sha256:bc3ed9738d0550758812544a6439f97aa4dcadca54e04835315863559aad3882"},
-    {file = "torchvision-0.22.0+rocm6.3-cp313-cp313t-manylinux_2_28_x86_64.whl", hash = "sha256:d7afe5ce3d266543ddd83213660e2800adbe3ba2c26ec31c739192278ba5c0bf"},
-    {file = "torchvision-0.22.0+rocm6.3-cp39-cp39-linux_x86_64.whl", hash = "sha256:db7599ef7d7edaf66fcfe59844f412c32b80a38182b862a33531a64937ca9a57"},
-    {file = "torchvision-0.22.0+rocm6.3-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:99b839e537d78e4ebafb926f92e27a48a9aade9f43ba374088afa4d55c5384cf"},
+    {file = "torchvision-0.22.1+rocm6.3-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:35b6e1ba34b009042e9dc00ed3f82a2b1700b738bd942615e68cd5e41faadb99"},
+    {file = "torchvision-0.22.1+rocm6.3-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:c150162c2e1de371e5a52c0eb4a98541f307e01716cfe5c850f25c7caa3d3fc4"},
+    {file = "torchvision-0.22.1+rocm6.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:0dce205fb04d9eb2f6feb74faf17cba9180aff70a8c8ac084912ce41b2dc0ab7"},
+    {file = "torchvision-0.22.1+rocm6.3-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:565ace3680d37c7d39ec8da758333fa13fafb30317b6d4c3b389d46430f11a2b"},
+    {file = "torchvision-0.22.1+rocm6.3-cp313-cp313t-manylinux_2_28_x86_64.whl", hash = "sha256:c377ae873066de8441fe9f7783b3ff88ced7996df7e3556ef32b95fd977fb351"},
+    {file = "torchvision-0.22.1+rocm6.3-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:99559b4c4af12e4ecc0e2df553fdbad0dab5eedbabea803ae95f8d41759156ff"},
 ]
 
 [package.dependencies]
 numpy = "*"
 pillow = ">=5.3.0,<8.3.dev0 || >=8.4.dev0"
-torch = "2.7.0"
+torch = "2.7.1"
 
 [package.extras]
 gdown = ["gdown (>=4.7.3)"]
@@ -5685,4 +5673,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.12.11"
-content-hash = "bc804cadb6d6c8cbe6ee052380dafc692671ff3fcad8b136f337146b2d581970"
+content-hash = "7ac4627bc41fb3c992f30a67d640cde3d3d8827ef404ac5c9fec90252befe2e4"

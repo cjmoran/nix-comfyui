@@ -7,7 +7,7 @@
     };
 
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+      url = "github:NixOS/nixpkgs/nixos-25.05";
     };
 
     poetry2nix = {
@@ -51,18 +51,34 @@
           value = pkgs.lib.getAttrFromPath path comfyuiPackages;
         };
 
-        packages = builtins.listToAttrs (pkgs.lib.flatten (
-          (map
-            (name: mkPackageEntry [name])
-            ["krita-with-extensions"])
-          ++ (map
-            (
-              platform: (map
-                (name: mkPackageEntry [platform name])
-                ["comfyui" "comfyui-with-extensions"])
+        packages = builtins.listToAttrs (
+          pkgs.lib.flatten (
+            (map (name: mkPackageEntry [name]) ["krita-with-extensions"])
+            ++ (
+              map
+              (
+                platform: (
+                  map
+                  (
+                    name:
+                      mkPackageEntry [
+                        platform
+                        name
+                      ]
+                  )
+                  [
+                    "comfyui"
+                    "comfyui-with-extensions"
+                  ]
+                )
+              )
+              [
+                "cuda"
+                "rocm"
+              ]
             )
-            ["cuda" "rocm"])
-        ));
+          )
+        );
       in {
         formatter = pkgs.nixpkgs-fmt;
 
