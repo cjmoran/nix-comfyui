@@ -13,6 +13,7 @@ let
     final.buildPythonPackage {
       inherit pname;
       version = "0.0.0";
+      format = "pyproject";
       buildCommand = ''
         printf "%s\n" ${lib.escapeShellArg message} >&2
         false
