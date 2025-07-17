@@ -9,8 +9,8 @@ buildNpmPackage {
     owner = "Comfy-Org";
     repo = "ComfyUI_frontend";
     fetchSubmodules = false;
-    rev = "a70d69cbd26be18ef0626e75b9b32870a50f1902";
-    hash = "sha256-eJAxB0kX91fCPex2FD/otkAs6lTiDTkfO1bPcpewHlQ=";
+    rev = "927773f5531b2af77767350ae5d50035150b3e70";
+    hash = "sha256-PKQp6e26S+gA230YoKvAGiiubaQg66u6yb0WL2nn2EY=";
   };
 
   npmDepsHash = "sha256-AO7HKbF5mAMc1TbUV9f9EXyBv5Yr8SB85P1X3s3z0jk=";
