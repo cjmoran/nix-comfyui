@@ -11,7 +11,7 @@
     };
 
     poetry2nix = {
-      url = "github:nix-community/poetry2nix";
+      url = "github:a-sup/poetry2nix";
       inputs = {
         flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
