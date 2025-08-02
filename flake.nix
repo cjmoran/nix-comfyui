@@ -10,11 +10,17 @@
       url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
+    # See description text:
+    # https://github.com/nix-community/poetry2nix/pull/1921
+    curl-minimal = {
+      url = "github:NixOS/nixpkgs?ref=pull/425701/head";
+    };
+
     poetry2nix = {
       url = "github:a-sup/poetry2nix";
       inputs = {
         flake-utils.follows = "flake-utils";
-        nixpkgs.follows = "nixpkgs";
+        nixpkgs.follows = "curl-minimal";
         systems.follows = "flake-utils/systems";
       };
     };
@@ -53,8 +59,9 @@
 
         packages = builtins.listToAttrs (
           pkgs.lib.flatten (
-            (map (name: mkPackageEntry [name]) ["krita-with-extensions"])
-            ++ (
+            # (map (name: mkPackageEntry [name]) ["krita-with-extensions"])
+            # ++
+            (
               map
               (
                 platform: (

@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "curl-minimal": {
+      "locked": {
+        "lastModified": 1752648410,
+        "narHash": "sha256-Jp/KoROCkdjgGXAEgMo3oBCph0vz+k3GMcXO5X6A8c8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0fb2e0daf799a7fa180348c28feb3b9fd821fb9e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "pull/425701/head",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -62,7 +78,7 @@
         ],
         "nix-github-actions": "nix-github-actions",
         "nixpkgs": [
-          "nixpkgs"
+          "curl-minimal"
         ],
         "systems": [
           "flake-utils",
@@ -86,6 +102,7 @@
     },
     "root": {
       "inputs": {
+        "curl-minimal": "curl-minimal",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
         "poetry2nix": "poetry2nix"
